@@ -216,6 +216,39 @@ const Index = () => {
         </div>
       </header>
 
+      <section className="relative h-[500px] overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://cdn.poehali.dev/projects/be35273f-3a51-4a1b-9b30-82c4dc9dddc4/files/333a6656-dd74-45d9-a145-4f2f80ec72e6.jpg')`
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+        </div>
+        <div className="relative h-full container mx-auto px-4 flex items-center">
+          <div className="max-w-2xl text-white animate-fade-in">
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Откройте для себя<br />мир изысканных вин
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-white/90">
+              Ваш персональный гид в удивительную вселенную виноделия. 
+              Изучайте сорта винограда, винные регионы, правила дегустации 
+              и искусство сочетания вина с едой.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="text-lg px-8 hover:scale-105 transition-transform">
+                <Icon name="BookOpen" size={20} className="mr-2" />
+                Начать изучение
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:scale-105 transition-transform">
+                <Icon name="Wine" size={20} className="mr-2" />
+                Каталог вин
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <main className="container mx-auto px-4 py-8">
         <Tabs defaultValue="catalog" className="space-y-8">
           <TabsList className="grid w-full grid-cols-2 md:grid-cols-7 gap-2 bg-card/50 p-2">
