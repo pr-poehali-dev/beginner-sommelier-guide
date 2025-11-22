@@ -175,6 +175,15 @@ const Index = () => {
   const [selectedType, setSelectedType] = useState<WineType>('all');
   const [selectedCountry, setSelectedCountry] = useState<WineCountry>('all');
   const [selectedGrape, setSelectedGrape] = useState<string>('all');
+  const [activeTab, setActiveTab] = useState('catalog');
+
+  const scrollToContent = (tab: string) => {
+    setActiveTab(tab);
+    const element = document.getElementById('content-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const wineTypes = [
     { value: 'all' as const, label: 'Все вина', icon: 'Wine' },
@@ -236,11 +245,20 @@ const Index = () => {
               и искусство сочетания вина с едой.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="text-lg px-8 hover:scale-105 transition-transform">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 hover:scale-105 transition-transform"
+                onClick={() => scrollToContent('grapes')}
+              >
                 <Icon name="BookOpen" size={20} className="mr-2" />
                 Начать изучение
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:scale-105 transition-transform">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:scale-105 transition-transform"
+                onClick={() => scrollToContent('catalog')}
+              >
                 <Icon name="Wine" size={20} className="mr-2" />
                 Каталог вин
               </Button>
@@ -249,8 +267,8 @@ const Index = () => {
         </div>
       </section>
 
-      <main className="container mx-auto px-4 py-8">
-        <Tabs defaultValue="catalog" className="space-y-8">
+      <main id="content-section" className="container mx-auto px-4 py-8">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="grid w-full grid-cols-2 md:grid-cols-7 gap-2 bg-card/50 p-2">
             <TabsTrigger value="catalog" className="font-serif">Каталог вин</TabsTrigger>
             <TabsTrigger value="grapes" className="font-serif">Сорта винограда</TabsTrigger>
