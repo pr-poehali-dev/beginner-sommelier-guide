@@ -267,6 +267,135 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-card/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h3 className="font-serif text-4xl font-bold text-foreground mb-4">
+              Путеводитель по миру вина
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Комплексный справочник для начинающих и опытных ценителей вина
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-border cursor-pointer animate-fade-in" onClick={() => scrollToContent('grapes')} style={{ animationDelay: '0ms' }}>
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                  <Icon name="Grape" size={32} className="text-primary" />
+                </div>
+                <CardTitle className="font-serif text-xl text-center text-foreground">
+                  Сорта винограда
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Изучите характеристики популярных сортов и их влияние на вкус вина
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-border cursor-pointer animate-fade-in" onClick={() => scrollToContent('regions')} style={{ animationDelay: '100ms' }}>
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                  <Icon name="MapPin" size={32} className="text-primary" />
+                </div>
+                <CardTitle className="font-serif text-xl text-center text-foreground">
+                  Винные регионы
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Откройте легендарные винодельческие области мира и их особенности
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-border cursor-pointer animate-fade-in" onClick={() => scrollToContent('tasting')} style={{ animationDelay: '200ms' }}>
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                  <Icon name="Eye" size={32} className="text-primary" />
+                </div>
+                <CardTitle className="font-serif text-xl text-center text-foreground">
+                  Правила дегустации
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Научитесь профессионально оценивать вино по всем параметрам
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-border cursor-pointer animate-fade-in" onClick={() => scrollToContent('pairing')} style={{ animationDelay: '300ms' }}>
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                  <Icon name="UtensilsCrossed" size={32} className="text-primary" />
+                </div>
+                <CardTitle className="font-serif text-xl text-center text-foreground">
+                  Сочетания с едой
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Узнайте, какое вино идеально подходит к вашим любимым блюдам
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-border cursor-pointer animate-fade-in" onClick={() => scrollToContent('dictionary')} style={{ animationDelay: '400ms' }}>
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 mx-auto">
+                  <Icon name="BookOpen" size={32} className="text-accent-foreground" />
+                </div>
+                <CardTitle className="font-serif text-xl text-center text-foreground">
+                  Винный словарь
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Разберитесь в терминологии: от танинов до терруара
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-border cursor-pointer animate-fade-in" onClick={() => scrollToContent('storage')} style={{ animationDelay: '500ms' }}>
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 mx-auto">
+                  <Icon name="Archive" size={32} className="text-accent-foreground" />
+                </div>
+                <CardTitle className="font-serif text-xl text-center text-foreground">
+                  Хранение вина
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Правильные условия для сохранения качества ваших вин
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-border cursor-pointer animate-fade-in" onClick={() => scrollToContent('catalog')} style={{ animationDelay: '600ms' }}>
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 mx-auto">
+                  <Icon name="Wine" size={32} className="text-accent-foreground" />
+                </div>
+                <CardTitle className="font-serif text-xl text-center text-foreground">
+                  Каталог вин
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  Подборка классических и современных вин со всего мира
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <main id="content-section" className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="grid w-full grid-cols-2 md:grid-cols-7 gap-2 bg-card/50 p-2">
